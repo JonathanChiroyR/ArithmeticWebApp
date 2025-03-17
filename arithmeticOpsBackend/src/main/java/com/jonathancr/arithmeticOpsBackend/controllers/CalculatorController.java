@@ -1,11 +1,13 @@
 package com.jonathancr.arithmeticOpsBackend.controllers;
 
-import com.jonathancr.arithmeticOpsBackend.models.ResultResponse;
+import com.jonathancr.arithmeticOpsBackend.dtos.OperationRequest;
+import com.jonathancr.arithmeticOpsBackend.dtos.ResultResponse;
 import com.jonathancr.arithmeticOpsBackend.services.ArithmeticOperationsService;
-import jakarta.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/webapp")
+@CrossOrigin(origins = "*") // Allows to Angular consume the API
 public class CalculatorController {
 
     private ArithmeticOperationsService arithmeticOperationsService;
@@ -14,9 +16,12 @@ public class CalculatorController {
         this.arithmeticOperationsService = arithmeticOperationsService;
     }
 
-    @GetMapping("/calculator/{value1}/{value2}/{operationType}")
-    public ResultResponse calculate(@PathVariable double value1,@PathVariable double value2,@PathVariable String operationType){
-        return arithmeticOperationsService.calculate(value1,value2,operationType);
+    @GetMapping("/calculator")
+    public ResultResponse calculate(
+            @RequestParam double value1,
+            @RequestParam double value2,
+            @RequestParam String operationType) {
+        return arithmeticOperationsService.calculate(value1, value2, operationType);
     }
 
 }

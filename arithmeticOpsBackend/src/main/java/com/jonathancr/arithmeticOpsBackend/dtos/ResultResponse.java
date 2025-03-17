@@ -1,4 +1,4 @@
-package com.jonathancr.arithmeticOpsBackend.models;
+package com.jonathancr.arithmeticOpsBackend.dtos;
 
 public class ResultResponse {
 

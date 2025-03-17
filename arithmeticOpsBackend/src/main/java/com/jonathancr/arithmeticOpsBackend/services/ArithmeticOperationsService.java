@@ -1,6 +1,6 @@
 package com.jonathancr.arithmeticOpsBackend.services;
 
-import com.jonathancr.arithmeticOpsBackend.models.ResultResponse;
+import com.jonathancr.arithmeticOpsBackend.dtos.ResultResponse;
 import org.springframework.stereotype.Service;
 
 @Service

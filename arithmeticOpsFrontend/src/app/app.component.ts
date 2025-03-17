@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { OperationsComponent } from './operations/operations.component';
+import { OperationsComponent } from './pages/operations.component';
 
 @Component({
   selector: 'app-root',
