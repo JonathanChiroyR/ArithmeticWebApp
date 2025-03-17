@@ -1,6 +1,5 @@
 package com.jonathancr.arithmeticOpsBackend.controllers;
 
-import com.jonathancr.arithmeticOpsBackend.dtos.OperationRequest;
 import com.jonathancr.arithmeticOpsBackend.dtos.ResultResponse;
 import com.jonathancr.arithmeticOpsBackend.services.ArithmeticOperationsService;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +15,7 @@ public class CalculatorController {
         this.arithmeticOperationsService = arithmeticOperationsService;
     }
 
+    //Obtain all the parameters sent by user
     @GetMapping("/calculator")
     public ResultResponse calculate(
             @RequestParam double value1,
