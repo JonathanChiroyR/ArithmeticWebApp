@@ -1,6 +1,7 @@
 # ArithmeticWebApp
 Arithmetical Web Application - Jonathan Chiroy
 
+(Note: I use only one repository for practicality, but when developing different projects, it is suggested to use one repository for each.)
 This project is a full-stack application developed with Spring Boot on the backend and Angular 19 on the frontend. Below are the steps to properly run the project.
 
 Prerequisites
